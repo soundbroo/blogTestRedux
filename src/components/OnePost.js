@@ -19,7 +19,7 @@ export class OnePost extends React.Component {
                     </button>
                     <hr className="article__delimetr" />
                 </div>)}
-                <button onClick={loadMorePosts(postPerPage)} className="article__more-button" disabled={val} >More posts</button>
+                <button onClick={loadMorePosts} className="article__more-button" disabled={val} >More posts</button>
             </div>
         )
     }

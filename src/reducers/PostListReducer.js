@@ -10,10 +10,10 @@ export const postList = (state = initialState, action) => {
             return { ...state, posts: action.payload }
         }
         case ('IS_MORE_POSTS'): {
-            return { state, postPerPage: action.payload }
+            return { ...state, postPerPage: state.postPerPage +5 }
         }
         case ('NO_MORE_POSTS'): {
-            return { state, val: action.payload }
+            return { ...state, val: action.payload }
         }
 
         default: return state

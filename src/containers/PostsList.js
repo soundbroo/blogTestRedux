@@ -8,15 +8,11 @@ class PostsList extends Component {
     componentDidMount() {
         this.props.getPosts()
     }
-
-    loadMorePosts(x) {
-
-        if (x < 99) {
-            console.log(x)
-            this.props.isMorePosts()
-            console.log(x)
-        }
-        else if (x > 95) {
+    
+    loadMorePosts = () => {
+        const { posts } = this.props.postList
+        this.props.isMorePosts()
+        if ( posts.length - posts.postPerPage <= 5) {
             this.props.noMorePosts()
         }
     }

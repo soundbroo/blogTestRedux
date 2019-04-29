@@ -10,8 +10,7 @@ export const getPosts = () => async dispatch => {
 
 export const isMorePosts = () => {
     return {
-        type: "IS_MORE_POSTS",
-        payload: 10
+        type: "IS_MORE_POSTS"
     }
 }
 
