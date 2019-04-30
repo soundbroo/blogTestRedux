@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom'
 import './OnePost.css'
 
 export class OnePost extends React.Component {
-
-
-
     render() {
         const { posts, postPerPage, val, loadMorePosts } = this.props
         return (

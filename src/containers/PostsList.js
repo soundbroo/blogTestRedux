@@ -8,11 +8,11 @@ class PostsList extends Component {
     componentDidMount() {
         this.props.getPosts()
     }
-    
+
     loadMorePosts = () => {
         const { posts } = this.props.postList
         this.props.isMorePosts()
-        if ( posts.length - posts.postPerPage <= 5) {
+        if (posts.length - posts.postPerPage <= 5) {
             this.props.noMorePosts()
         }
     }
@@ -20,10 +20,12 @@ class PostsList extends Component {
     render() {
         const { posts, postPerPage, val } = this.props.postList
         return (
-            <OnePost loadMorePosts={this.loadMorePosts}
+            <OnePost
+                loadMorePosts={this.loadMorePosts}
                 posts={posts}
                 postPerPage={postPerPage}
-                val={val} />
+                val={val}
+            />
         )
     }
 }

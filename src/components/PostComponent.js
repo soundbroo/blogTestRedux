@@ -4,6 +4,9 @@ import './Post.css';
 export default class PostComponent extends Component {
     render() {
         const { post, user, comments } = this.props
+        if (!post) {
+            return null
+        }
         return (
             <div className="Article post-layout">
                 <div className="article-title">{post.title}</div>
