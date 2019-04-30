@@ -1,0 +1,6 @@
+export const GET_POST_DATA = 'GET_POST_DATA'
+export const IS_MORE_POSTS = 'IS_MORE_POSTS'
+export const NO_MORE_POSTS = 'NO_MORE_POSTS'
+export const GET_POSTS = 'GET_POST'
+export const LOADING_POST_DATA = 'LOADING_POST_DATA'
+export const ISLOADED_DISABLE = 'ISLOADED_DISABLE'

@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { OnePost } from '../components/OnePost'
 import { connect } from 'react-redux'
-import { getPosts, isMorePosts, noMorePosts } from '../actions/PostListActions'
+import { getPosts, isMorePosts, noMorePosts, disableLoader } from '../actions/PostListActions'
 
 class PostsList extends Component {
 
     componentDidMount() {
         this.props.getPosts()
+        this.props.disableLoader()
     }
 
     loadMorePosts = () => {
@@ -39,7 +40,8 @@ const mapStateToProps = (state) => {
 const mapDispathToProps = {
     getPosts,
     isMorePosts,
-    noMorePosts
+    noMorePosts, 
+    disableLoader
 }
 
 export default connect(mapStateToProps, mapDispathToProps)(PostsList);

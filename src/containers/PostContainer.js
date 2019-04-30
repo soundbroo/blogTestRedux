@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { getPosts } from '../actions/PostAction'
 import PostComponent from '../components/PostComponent'
+import { Loader } from '../components/Loader'
 
 class PostContainer extends Component {
 
@@ -10,11 +11,11 @@ class PostContainer extends Component {
     }
 
     render() {
-        const { post, user, comments } = this.props
+        const { isLoaded, post, user, comments } = this.props
+        
         return (
-            <>
-                <PostComponent post={post} user={user} comments={comments} />
-                {console.log(this.props)}
+            <>  
+                {isLoaded == true ? <PostComponent post={post} user={user} comments={comments} /> : <Loader />}
             </>
         )
     }
@@ -22,6 +23,7 @@ class PostContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
+        isLoaded: state.post.isLoaded,
         post: state.post.post,
         user: state.post.user,
         comments: state.post.comments

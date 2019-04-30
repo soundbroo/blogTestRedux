@@ -1,3 +1,5 @@
+import { GET_POSTS, IS_MORE_POSTS, NO_MORE_POSTS } from '../constants'
+
 const initialState = {
     posts: [],
     postPerPage: 5,
@@ -6,13 +8,13 @@ const initialState = {
 
 export const postList = (state = initialState, action) => {
     switch (action.type) {
-        case 'GET_POSTS': {
+        case GET_POSTS: {
             return { ...state, posts: action.payload }
         }
-        case ('IS_MORE_POSTS'): {
+        case (IS_MORE_POSTS): {
             return { ...state, postPerPage: state.postPerPage +5 }
         }
-        case ('NO_MORE_POSTS'): {
+        case (NO_MORE_POSTS): {
             return { ...state, val: action.payload }
         }
 
