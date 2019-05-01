@@ -9,7 +9,7 @@ export const getPosts = () => async dispatch => {
     const commentsRequest = await axios.get("https://jsonplaceholder.typicode.com/posts/" + id + "/comments")
     const com = commentsRequest.data.map(res => res)
     const comments = com.filter(el => el.postId == id)
-    if (!postRequest.data || !userRequest.data || !comments){
+    if (!postRequest.data || !userRequest.data ){
         dispatch({
             type: LOADING_POST_DATA
         })
