@@ -8,6 +8,7 @@
     background-color: #333333;
     padding-left: 40px;
     margin-right: 40px;
+    transition: 0.3s;
 }
 
 .Sidebar__sidebar-title {
@@ -20,7 +21,7 @@
 .Sidebar__sidebar-description {
     margin-top: 20px;
     font-size: 14px;
-    width: 320px;
+    max-width: 320px;
     line-height: normal;
     color: #9B9B9B;
 }
@@ -74,6 +75,7 @@
         flex-direction: column;
         min-width: 80px;
         background-color: #333333;
+        transition: 0.3s;
     }
 
     .Sidebar__sidebar-title {
