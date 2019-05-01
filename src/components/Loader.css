@@ -1,6 +1,14 @@
+.Loader {
+    min-width: 100px;
+    width: 950px;
+    padding-right: 40px;
+}
+
 .Loader div {
+    display: flex;
+    flex-direction: column;
     animation: pulse 0.3s infinite ease-in-out;
-    margin-left: 50px;
+    min-width: 100px;
 }
 
 .Sidebar {
@@ -10,7 +18,6 @@
 .loader-title {
     margin-top: 50px;
     height: 36px;
-    width: 950px;
 }
 
 .loader-date {
@@ -22,7 +29,6 @@
 .loader-text {
     height: 14px;
     margin-top: 15px;
-    width: 950px;
 }
 
 .loader-author {
@@ -40,13 +46,13 @@
 
 .loader-comments-name {
     height: 14px;
-    width: 130px;
+    max-width: 130px;
     margin-top: 20px;
 }
 
 .loader-comments-email {
     height: 14px;
-    width: 150px;
+    max-width: 150px;
     margin-top: 20px;
 }
 
