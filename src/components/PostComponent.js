@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './Post.css';
+import React, { Component } from 'react'
+import './Post.css'
 
 export default class PostComponent extends Component {
     render() {
