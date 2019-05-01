@@ -12,9 +12,9 @@ class PostContainer extends Component {
 
     render() {
         const { isLoaded, post, user, comments } = this.props
-        
+
         return (
-            <>  
+            <>
                 {isLoaded == true ? <PostComponent post={post} user={user} comments={comments} /> : <Loader />}
             </>
         )
